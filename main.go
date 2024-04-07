@@ -40,9 +40,6 @@ func scrape(filename string, url string, isComplete chan<- bool) {
 
 	output, _ := io.ReadAll(response.Body)
 
-	// fmt.Println("", string(output))
-
-	// f.WriteString(string(output))
 	f.Write(output)
 
 	fmt.Println("scraping complete, ", filename, " written")
